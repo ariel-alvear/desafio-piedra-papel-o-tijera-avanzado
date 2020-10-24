@@ -34,13 +34,10 @@ if player1 != 4
     print "Juego finalizado \n"
   elsif player2 == 3
     player2 = "Tijera"
-    print "Turno jugador 2: \n 1. Piedra\n 2. Papel\n 3. Tijera\n 4. Salir \n"
   elsif player2 == 2
     player2 = "Papel"
-    print "Turno jugador 2: \n 1. Piedra\n 2. Papel\n 3. Tijera\n 4. Salir \n"
   elsif player2 == 1
     player2 = "Piedra"
-    print "Turno jugador 2: \n 1. Piedra\n 2. Papel\n 3. Tijera\n 4. Salir \n"
   else
     print "inválido \n"
   end
