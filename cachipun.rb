@@ -3,7 +3,7 @@ puts "Turno jugador 1: \n 1. Piedra\n 2. Papel\n 3. Tijera\n 4. Salir"
 player1 = gets.chomp.to_i
 
 while player1 != 1 && player1 != 2 && player1 != 3 && player1 != 4
-  print "Por favor ingresa una opción válida\n"
+  print "Jugador 1\nPor favor ingresa una opción válida\n"
   player1 = gets.chomp.to_i
 end
 
@@ -26,7 +26,7 @@ if player1 != 4
   player2 = gets.chomp.to_i
 
   while player2 != 1 && player2 != 2 && player2 != 3 && player2 != 4
-    print "Por favor ingresa una opción válida\n"
+    print "Jugador 2\nPor favor ingresa una opción válida\n"
     player2 = gets.chomp.to_i
   end
 
