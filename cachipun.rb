@@ -1,46 +1,37 @@
-puts "Turno jugador 1: \n 1. Piedra\n 2. Papel\n 3. Tijera\n 4. Salir"
-
-player1 = gets.chomp.to_i
-
-while player1 != 1 && player1 != 2 && player1 != 3 && player1 != 4
-  print "Jugador 1\nPor favor ingresa una opción válida\n"
-  player1 = gets.chomp.to_i
-end
-
-if player1 == 4
-  print "Juego finalizado \n"
-elsif player1 == 3
-  player1 = "Tijera"
-  print "Turno jugador 2: \n 1. Piedra\n 2. Papel\n 3. Tijera\n 4. Salir \n"
-elsif player1 == 2
-  player1 = "Papel"
-  print "Turno jugador 2: \n 1. Piedra\n 2. Papel\n 3. Tijera\n 4. Salir \n"
-elsif player1 == 1
-  player1 = "Piedra"
-  print "Turno jugador 2: \n 1. Piedra\n 2. Papel\n 3. Tijera\n 4. Salir \n"
-else
-  print "inválido \n"
-end
-
-if player1 != 4
-  player2 = gets.chomp.to_i
-
-  while player2 != 1 && player2 != 2 && player2 != 3 && player2 != 4
-    print "Jugador 2\nPor favor ingresa una opción válida\n"
-    player2 = gets.chomp.to_i
+def valid_option(x)
+  puts "Turno jugador: \n 1. Piedra\n 2. Papel\n 3. Tijera\n 4. Salir"
+  x = gets.chomp.to_i
+  while x != 1 && x != 2 && x != 3 && x != 4
+    print "Jugador\nPor favor ingresa una opción válida\n"
+    x = gets.chomp.to_i
   end
+  x = x
+end
 
-  if player2 == 4
+def option_select(x)
+  if x == 4
     print "Juego finalizado \n"
-  elsif player2 == 3
-    player2 = "Tijera"
-  elsif player2 == 2
-    player2 = "Papel"
-  elsif player2 == 1
-    player2 = "Piedra"
+  elsif x == 3
+    x = "Tijera"
+  elsif x == 2
+    x = "Papel"
+  elsif x == 1
+    x = "Piedra"
   else
     print "inválido \n"
   end
+end
+
+
+
+player1 = 0
+player1 = valid_option(player1).to_i
+
+if player1 != 4
+  player1 = option_select(player1)
+  player2 = 0
+  player2 = valid_option(player2).to_i
+  player2 = option_select(player2)
 else
   print "\n"
 end
